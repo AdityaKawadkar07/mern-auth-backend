@@ -16,7 +16,7 @@ app.use(cookieParser())
 app.use(bodyParser.json())
 app.use(
     cors({
-        origin: ["http://localhost:3000","https://authz-app-rust.vercel.app/"],
+        origin: ["http://localhost:3000",process.env.FRONTEND_URL],
         credentials: true
     })
 )
